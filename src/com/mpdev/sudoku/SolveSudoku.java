@@ -34,8 +34,6 @@ public class SolveSudoku {
 
     SuDoku solvedSuDoku;
 
-    int i;
-    for (i=1; i < 10000; ++i) mySuDoku.tryToSolve();
     if ((solvedSuDoku = mySuDoku.tryToSolve()) != null) {
         System.out.println();
         System.out.println(SuDoku.getCount()+" attempts");
