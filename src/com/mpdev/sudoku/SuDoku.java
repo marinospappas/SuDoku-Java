@@ -160,8 +160,8 @@ public class SuDoku {
         if (s.findNextEmpty(nextEmpty)) { 
         	// increase the attempt count and print a '.'
         	++count;
-        	System.out.print(".");
-        	if (count%100 == 0) System.out.println();
+        	//System.out.print(".");
+        	//if (count%100 == 0) System.out.println();
         	
         	//try all possible numbers 1-9 in the empty square
         	for (int num=1; num <= 9; ++num) {	

@@ -1,11 +1,7 @@
 
 package com.mpdev.sudoku;
 
-import java.io.IOException;
-import java.time.Instant;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 
 public class SolveSudoku {
 
@@ -34,11 +30,14 @@ public class SolveSudoku {
     mySuDoku.printData();
 
     tStart = Calendar.getInstance();
-    System.out.println(tStart.getTime().toString());
+    System.out.println(tStart.getTime());
 
     SuDoku solvedSuDoku;
+
+    int i;
+    for (i=1; i < 10000; ++i) mySuDoku.tryToSolve();
     if ((solvedSuDoku = mySuDoku.tryToSolve()) != null) {
-        System.out.println("");
+        System.out.println();
         System.out.println(SuDoku.getCount()+" attempts");
         System.out.println("SuDoku was solved successfully");
         System.out.println("-----------------------");
@@ -46,13 +45,13 @@ public class SolveSudoku {
         System.out.println("-----------------------");
     }
     else {
-        System.out.println("");
-        System.out.println(mySuDoku.getCount()+" attempts");
-        System.out.println("No sulotion was found");
+        System.out.println();
+        System.out.println(SuDoku.getCount()+" attempts");
+        System.out.println("No solution was found");
     }
     tEnd = Calendar.getInstance();
     long duration = tEnd.getTimeInMillis() - tStart.getTimeInMillis();
-    System.out.println(tEnd.getTime().toString());
+    System.out.println(tEnd.getTime());
     System.out.println("Solution took: " + duration + " msec");
   }
 }
