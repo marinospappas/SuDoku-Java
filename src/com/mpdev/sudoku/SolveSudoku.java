@@ -33,7 +33,7 @@ public class SolveSudoku {
     System.out.println(tStart.getTime());
 
     SuDoku solvedSuDoku;
-    
+
     if ((solvedSuDoku = mySuDoku.tryToSolve()) != null) {
         System.out.println();
         System.out.println(SuDoku.getCount()+" attempts");
