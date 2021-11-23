@@ -228,7 +228,7 @@ public class SuDoku {
                     coord[1] = j;
                     return true;
                 }
-        // no emtpy square found
+        // no empty square found
         return false;
     } // boolean findNextEmpty (int[] coord)
 

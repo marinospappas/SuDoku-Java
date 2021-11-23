@@ -164,7 +164,7 @@ public class SuDoku0 {
 	        // all numbers failed - return fail
 	        if (debug) System.out.println("all numbers failed - returning false");
 	        return false;
-	    } // booloean tryToSolve()
+	    } // boolean tryToSolve()
 	  
 	    // set specific square to number
 	    void setSquare (int num, int[] coord) {
